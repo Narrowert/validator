@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>Nasirova Dinara</title>
+<meta name="keywords" content="example, JavaScript Form Validation, Sample registration form" />
+<meta name="description" content="This document is an example of JavaScript Form Validation using a sample registration form. " />
+<link rel='stylesheet' href='validation.css' type='text/css' />
+<link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+<script src="validation.js"></script>
+</head>
+<body>
+    <div class="main__block">
+        <svg width="80px" height="80px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5 5.58579 5 6.05719 5 7V17C5 18.8856 5 19.8284 5.58579 20.4142C5.91238 20.7408 6.34994 20.8853 7 20.9493V19.5C7 18.6716 7.67157 18 8.5 18C9.32843 18 10 18.6716 10 19.5V21H14V19.5C14 18.6716 14.6716 18 15.5 18C16.3284 18 17 18.6716 17 19.5V20.9493C17.6501 20.8853 18.0876 20.7408 18.4142 20.4142C19 19.8284 19 18.8856 19 17V7C19 6.05719 19 5.58579 18.7071 5.29289C18.4142 5 17.9428 5 17 5H7C6.05719 5 5.58579 5 5.29289 5.29289Z" fill="#2A4157" fill-opacity="0.24"/>
+            <path d="M8.5 9.5L15.5 9.5" stroke="#222222" stroke-linecap="round"/>
+            <path d="M8.5 12.5L12.5 12.5" stroke="#222222" stroke-linecap="round"/>
+            <path d="M8.5 15.5L14.5 15.5" stroke="#222222" stroke-linecap="round"/>
+            <path d="M16 19.5C16 19.2239 15.7761 19 15.5 19C15.2239 19 15 19.2239 15 19.5H16ZM15 19.5V21H16V19.5H15Z" fill="#33363F"/>
+            <path d="M9 19.5C9 19.2239 8.77614 19 8.5 19C8.22386 19 8 19.2239 8 19.5H9ZM8 19.5V21H9V19.5H8Z" fill="#33363F"/>
+        </svg>
+        <h1 class="main__title">Registration Form</h1>
+        <p class="main__subtitle">
+            Use tab keys to move from one input field to the next.
+        </p>
+        <form name='registration' onSubmit="return formValidation();">
+        <ul>
+            <li>
+                <label for="userid">User id:</label>
+                <input id="userid" type="text" size="12"  required/>
+            </li>
+            <li>
+                <label for="passid">Password:</label>
+                <input id="passid" type="password" name="passid" size="12"  required/>
+            </li>
+            <li>
+                <label for="username">Name:</label>
+                <input id="username" type="text" name="username" size="50"  required/>
+            </li>
+            <li>
+                <label for="address">Address:</label>
+                <input id="address" type="text" name="address" size="50"  required/>
+            </li>
+            <li>
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="Default" disabled>(Please select a country)</option>
+                    <option value="AF">Australia</option>
+                    <option value="AL">Canada</option>
+                    <option value="DZ">India</option>
+                    <option value="AS">Russia</option>
+                    <option value="AD">USA</option>
+                </select>
+            </li>
+            <li>
+                <label for="zip">ZIP Code:</label>
+                <input id="zip" type="text" name="zip"  required/>
+            </li>
+            <li>
+                <label for="email">Email:</label>
+                <input id="email" type="text" name="email" size="50"  required/>
+            </li>
+            <li>
+                <p>Sex:</p>
+                <div class="gender">
+                    <div class="gender__item">
+                        <input id="male" type="radio" name="gender" value="Male" />
+                        <label for="male">Male</label>
+                    </div>
+                    <div class="gender__item">
+                        <input id="female" type="radio" name="gender" value="Female" />
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <p>Language:</p>
+                <div class="gender">
+                    <div class="gender__item">
+                        <input id="male" type="checkbox" name="gender" value="Male"  required/>
+                        <label for="male">English</label>
+                    </div>
+                    <div class="gender__item">
+                        <input id="female" type="checkbox" name="gender" value="Female"  required/>
+                        <label for="female">Russian</label>
+                    </div>
+                    <div class="gender__item">
+                        <input id="female" type="checkbox" name="gender" value="Female"  required/>
+                        <label for="female">Uzbek</label>
+                    </div>
+                    <div class="gender__item">
+                        <input id="female" type="checkbox" name="gender" value="Female"  required/>
+                        <label for="female">Tatar</label>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <label for="desc">About:</label>
+                <textarea name="desc" id="desc" required></textarea>
+            </li>
+        </ul>
+        <button>Submit</button>
+        </form>
+    </div>
+</body>
+</html>
